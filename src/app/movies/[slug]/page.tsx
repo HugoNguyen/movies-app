@@ -38,11 +38,9 @@ const MoviePage = ({ params }: {
     return <>
         <div className="flex justify-center p-6">
             <div className="rounded-lg shadow-lg max-w-sm">
-                <a href="#!">
-                    <video ref={videoRef} width="320" height="240" muted={true} controls className="w-full rounded-t-lg" playsInline autoPlay>
-                        {clip && <source src={`/api/clip/${clip}`} type="video/mp4" />}
-                    </video>
-                </a>
+                <video ref={videoRef} width="320" height="240" muted={true} controls className="w-full rounded-t-lg" playsInline>
+                    {clip && <source src={`/api/clip/${clip}`} type="video/mp4" />}
+                </video>
                 <div className="flex flex-col gap-2 p-6">
                     {movie && movie.clips && movie.clips.map(e => <div key={e} onClick={() => setClip(e)} className="cursor-pointer w-full rounded-lg border px-2 py-1 text-sm bg-gray-100 hover:bg-gray-200">{e}</div>)}
                 </div>
