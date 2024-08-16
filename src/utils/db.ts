@@ -7,11 +7,6 @@ export type Movie = {
 }
 
 export function connect() {
-    console.log('connect to db');
-
     const movies = JSON.parse(fs.readFileSync('public/resources/data.json', 'utf8'));
-
-    console.log(`Found ${movies.length} records`);
-
     return movies;
 }
