@@ -1,0 +1,18 @@
+[
+    {
+        "id": "video1",
+        "thumbnail": "video1.jpg",
+        "clips": [
+            "clip1.mp4",
+            "clip2.mp4"
+        ]
+    },
+    {
+        "id": "video2",
+        "thumbnail": "video2.jpg",
+        "clips": [
+            "clip3.mp4",
+            "clip4.mp4"
+        ]
+    }
+]
