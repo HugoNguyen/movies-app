@@ -5,6 +5,10 @@
         "clips": [
             "clip1.mp4",
             "clip2.mp4"
+        ],
+        "tags": [
+            "a",
+            "b"
         ]
     },
     {
@@ -13,6 +17,58 @@
         "clips": [
             "clip3.mp4",
             "clip4.mp4"
+        ],
+        "tags": [
+            "a",
+            "b"
+        ]
+    },
+    {
+        "id": "video3",
+        "thumbnail": "video1.jpg",
+        "clips": [
+            "clip1.mp4",
+            "clip2.mp4"
+        ],
+        "tags": [
+            "a",
+            "b"
+        ]
+    },
+    {
+        "id": "video4",
+        "thumbnail": "video2.jpg",
+        "clips": [
+            "clip3.mp4",
+            "clip4.mp4"
+        ],
+        "tags": [
+            "a",
+            "b"
+        ]
+    },
+    {
+        "id": "video5",
+        "thumbnail": "video1.jpg",
+        "clips": [
+            "clip1.mp4",
+            "clip2.mp4"
+        ],
+        "tags": [
+            "a",
+            "b"
+        ]
+    },
+    {
+        "id": "video6",
+        "thumbnail": "video2.jpg",
+        "clips": [
+            "clip3.mp4",
+            "clip4.mp4"
+        ],
+        "tags": [
+            "a",
+            "b"
         ]
     }
 ]
