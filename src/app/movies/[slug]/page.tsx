@@ -39,7 +39,7 @@ const MoviePage = ({ params }: {
         <div className="flex justify-center p-6">
             <div className="rounded-lg shadow-lg max-w-sm">
                 <a href="#!">
-                    <video ref={videoRef} width="320" height="240" muted={true} controls className="w-full rounded-t-lg">
+                    <video ref={videoRef} width="320" height="240" muted={true} controls className="w-full rounded-t-lg" playsInline autoPlay>
                         {clip && <source src={`/api/clip/${clip}`} type="video/mp4" />}
                     </video>
                 </a>
