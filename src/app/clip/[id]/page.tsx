@@ -1,3 +1,5 @@
+"use client"
+
 const ClipPage = ({ params }: {
     params: {
         id: string
