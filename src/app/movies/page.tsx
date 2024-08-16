@@ -1,14 +1,18 @@
-import React from "react";
-import { connect } from '@/utils/db';
+"use client"
+import React, { useEffect, useState } from "react";
+import { connect, Movie } from '@/utils/db';
 import Link from "next/link";
 
-const getMovies = async () => {
-    const movies = connect();
-    return movies;
+const getMovies = (): Promise<Movie[]> => {
+    return fetch("/api/movies").then(res => res.json());
 }
 
-export default async function MoviesPage() {
-    const movies = await getMovies();
+export default function MoviesPage() {
+    const [movies, setMovies] = useState<Movie[]>([]);
+
+    useEffect(() => {
+        getMovies().then(rs => setMovies(rs));
+    }, []);
 
     return <div>
         {
