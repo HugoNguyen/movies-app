@@ -15,7 +15,7 @@ const MoviePage = ({ params }: {
     const [movie, setMovie] = useState<Movie>();
     const [clip, setClip] = useState<string | null>();
 
-    const videoRef = useRef<HTMLVideoElement | undefined>();
+    const videoRef = useRef<HTMLVideoElement>(null);
 
     useEffect(() => {
         getMovie(params.slug).then(rs => setMovie(rs));
@@ -49,14 +49,6 @@ const MoviePage = ({ params }: {
             </div>
         </div>
     </>
-}
-
-function Video({ clip }: { clip: string }) {
-    return <a href="#!">
-        <video width="320" height="240" muted={true} controls className="w-full rounded-t-lg">
-            {clip && <source src={`/api/clip/${clip}`} type="video/mp4" />}
-        </video>
-    </a>
 }
 
 export default MoviePage;
