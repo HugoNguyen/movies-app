@@ -48,8 +48,7 @@ export default function MoviesPage({
 
     useEffect(() => {
         const tg = sourceMovie
-            .flatMap(q => q.tags)
-            .filter((value, index, array) => array.indexOf(value) === index);
+            .flatMap(q => q.tags);
 
         const atr = sourceMovie
             .map(q => {
@@ -60,7 +59,11 @@ export default function MoviesPage({
                 return q.id;
             });
 
-        setTags([...tg, ...atr]);
+        setTags(
+            [...tg, ...atr]
+                .filter(q => !!q)
+                .filter((value, index, array) => array.indexOf(value) === index)
+        );
     }, [sourceMovie]);
 
     useEffect(() => {
