@@ -11,7 +11,7 @@ type PagingResponse = {
     term: string;
 }
 
-const PAGE_SIZE = 2;
+const PAGE_SIZE = 12;
 
 const getMovies = (): Promise<Movie[]> => {
     return fetch("/api/movies")
@@ -105,19 +105,6 @@ export default function MoviesPage({
     }
 
     return <>
-        <div className="container mx-auto p-6">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-                <h2 className="text-lg font-semibold mb-4">Tag</h2>
-                <div className="flex flex-wrap gap-2">
-                    {
-                        tags
-                        && tags.map(
-                            q => <div key={q} onClick={() => handleSearch(q, 1)} className="cursor-pointer bg-blue-200 hover:bg-blue-300 py-1 px-2 rounded-lg text-sm">{q}</div>
-                        )
-                    }
-                </div>
-            </div>
-        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-10 md:px-20">
             {
                 movies.data.map(movie => <MovieItemCard key={movie.id} data={movie}></MovieItemCard>)
@@ -148,6 +135,19 @@ export default function MoviesPage({
                     </svg>
                 </div>
             }
+        </div>
+        <div className="container mx-auto p-6">
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h2 className="text-lg font-semibold mb-4">Tag</h2>
+                <div className="flex flex-wrap gap-2">
+                    {
+                        tags
+                        && tags.map(
+                            q => <div key={q} onClick={() => handleSearch(q, 1)} className="cursor-pointer bg-blue-200 hover:bg-blue-300 py-1 px-2 rounded-lg text-sm">{q}</div>
+                        )
+                    }
+                </div>
+            </div>
         </div>
     </>
 }
