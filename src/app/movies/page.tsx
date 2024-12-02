@@ -55,9 +55,8 @@ export default function MoviesPage({
 
         const atr = sourceMovie
             .map(q => {
-                const idx = q.id.indexOf('-');
-                if (idx > -1) {
-                    return q.id.substring(0, idx);
+                if (q.actress) {
+                    return q.actress
                 }
                 return q.id;
             });

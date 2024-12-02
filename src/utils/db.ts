@@ -6,6 +6,7 @@ export type Movie = {
     clips: string[];
     tags: string[];
     createdAt?: Date;
+    actress: string;
 }
 
 export function connect() : Movie[] {
