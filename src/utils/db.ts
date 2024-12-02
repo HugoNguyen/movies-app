@@ -5,9 +5,10 @@ export type Movie = {
     thumbnail: string;
     clips: string[];
     tags: string[];
+    createdAt?: Date;
 }
 
 export function connect() : Movie[] {
-    const movies = JSON.parse(fs.readFileSync('public/resources/data.json', 'utf8'));
-    return movies;
+    const movies = JSON.parse(fs.readFileSync('public/resources/data.json', 'utf8')) as Movie[];
+    return movies.map(m => ({ ...m, createdAt: m.createdAt ? new Date(m.createdAt) : undefined }));
 }
