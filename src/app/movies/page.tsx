@@ -42,6 +42,7 @@ export default function MoviesPage({
         data: [],
         pageIndex: currentPage,
         term: query,
+        sort: sort,
     });
     const [tags, setTags] = useState<string[]>([]);
 
