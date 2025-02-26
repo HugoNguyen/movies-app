@@ -16,7 +16,7 @@ const MovieItemCard = ({ data }: Props) => {
     return <>
         <div className="flex px-3 py-3 cursor-pointer" onClick={goToMovie}>
             <div className="max-w-sm rounded overflow-hidden shadow-lg">
-                <img className="w-full" src={`/resources/${data.thumbnail}`} alt="" />
+                <img className="w-full" src={ !data.path ? `/resources/${data.thumbnail}` : `/resources/${data.path}/${data.thumbnail}` } alt="" />
                 <div className="px-6 py-4">
                     <div className="font-bold text-xl mb-2">{data.id}</div>
                 </div>

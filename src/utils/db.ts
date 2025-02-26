@@ -2,6 +2,7 @@ import fs from "fs";
 
 export type Movie = {
     id: string;
+    path?: string;
     thumbnail: string;
     clips: string[];
     tags: string[];
