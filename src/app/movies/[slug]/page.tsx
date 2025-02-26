@@ -49,7 +49,7 @@ const MoviePage = ({ params }: {
                 <div className="flex flex-col gap-2 p-6">
                     {
                         movie && movie.tags && movie.tags.map(
-                            q => <Link className="cursor-pointer bg-blue-200 hover:bg-blue-300 py-1 px-2 rounded-lg text-sm" href={'/movies?' + `query=${q}`}>{q}</Link>
+                            q => <Link key={q} className="cursor-pointer bg-blue-200 hover:bg-blue-300 py-1 px-2 rounded-lg text-sm" href={'/movies?' + `query=${q}`}>{q}</Link>
                         )
                     }
                 </div>
