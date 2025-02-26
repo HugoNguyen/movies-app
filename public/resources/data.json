@@ -76,5 +76,18 @@
             "b"
         ],
         "createdAt": "2024-08-16T02:19:14.308Z"
+    },
+    {
+        "id": "video7",
+        "path": "sub1/sub2",
+        "thumbnail": "video7.jpg",
+        "clips": [
+            "clip5.mp4"
+        ],
+        "tags": [
+            "a",
+            "b"
+        ],
+        "createdAt": "2024-08-16T02:19:14.308Z"
     }
 ]
