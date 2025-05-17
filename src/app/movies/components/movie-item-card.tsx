@@ -13,6 +13,8 @@ const MovieItemCard = ({ data }: Props) => {
         router.push(`/movies/${data.id}`);
     }
 
+    const tags = [...data?.tags, data.actress].filter(q => !!q);
+
     return <>
         <div className="flex px-3 py-3 cursor-pointer" onClick={goToMovie}>
             <div className="max-w-sm rounded overflow-hidden shadow-lg">
@@ -22,7 +24,7 @@ const MovieItemCard = ({ data }: Props) => {
                 </div>
                 <div className="px-6 py-4">
                     {
-                        data.tags && data.tags.map(
+                        tags.map(
                             e => <span key={e} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">{e}</span>
                         )
                     }
